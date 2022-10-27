@@ -1,4 +1,3 @@
-from pstats import SortKey
 from flask import Flask, json
 
 app = Flask(__name__)
