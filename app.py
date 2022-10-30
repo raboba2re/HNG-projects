@@ -1,4 +1,4 @@
-from flask import Flask, json
+from flask import Flask, json, Response
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -13,7 +13,11 @@ def index():
         "bio": " Technical writter"
     }
     
-    return json.dumps(hng_response, sort_keys= False)
+    test= "this is just a test"
+    
+    data = json.dumps(hng_response, sort_keys=False)
+    
+    return Response(data, mimetype='application/json')
 
 
 if __name__ == "__main__": 
